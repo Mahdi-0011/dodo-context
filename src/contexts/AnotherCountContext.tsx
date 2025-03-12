@@ -5,6 +5,10 @@ export type AnotherCountContextType = {
 	count: number;
 	add: () => void;
 	subtract: () => void;
+	reset: () => void;
+	divideBy2: () => void;
+	setTO100: () => void;
+	setTO12: () => void;
 };
 
 export const AnotherCountContext =
@@ -29,12 +33,24 @@ export function AnotherCountContextProvider({
 	};
 
 	// reset
+	const reset = () => {
+		setCount((prev: number) => prev - prev);
+	};
 	// dela med 2
+	const divideBy2 = () => {
+		setCount((prev: number) => prev / 2);
+	};
 	// sätt till 100
+	const setTO100 = () => {
+		setCount((prev: number) => prev = 100);
+	};
 	// sätt till 12
+	const setTO12 = () => {
+		setCount((prev: number) => prev = 12);
+	};
 
 	return (
-		<AnotherCountContext.Provider value={{ count, add, subtract }}>
+		<AnotherCountContext.Provider value={{ count, add, subtract, reset, divideBy2, setTO100, setTO12 }}>
 			{children}
 		</AnotherCountContext.Provider>
 	);
