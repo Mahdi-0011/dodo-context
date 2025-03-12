@@ -1,5 +1,6 @@
 import "./App.scss";
 import AddCount from "./components/AddCount/AddCount";
+import CollatzConjecture from "./components/CollatzConjecture/CollatzConjecture";
 import NoContext from "./components/NoContext/NoContext";
 import ShowCount from "./components/ShowCount/ShowCount";
 import { AnotherCountContextProvider } from "./contexts/AnotherCountContext";
@@ -12,6 +13,7 @@ function App() {
 			<AddCount />
 			<ShowCount />
 			<NoContext />
+			<CollatzConjecture />
 		</AnotherCountContextProvider>
 	);
 }

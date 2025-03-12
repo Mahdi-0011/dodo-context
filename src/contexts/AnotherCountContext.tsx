@@ -31,10 +31,9 @@ export function AnotherCountContextProvider({
 	const subtract = () => {
 		setCount((prev: number) => prev - 1);
 	};
-
 	// reset
 	const reset = () => {
-		setCount((prev: number) => prev - prev);
+		setCount(0);
 	};
 	// dela med 2
 	const divideBy2 = () => {
@@ -42,11 +41,11 @@ export function AnotherCountContextProvider({
 	};
 	// sätt till 100
 	const setTO100 = () => {
-		setCount((prev: number) => prev = 100);
+		setCount(100);
 	};
 	// sätt till 12
 	const setTO12 = () => {
-		setCount((prev: number) => prev = 12);
+		setCount(12);
 	};
 
 	return (
