@@ -22,6 +22,34 @@ export default function AddCount() {
 			>
 				Subtract
 			</button>
+			<button
+				onClick={() => {
+					context?.reset();
+				}}
+			>
+				reset
+			</button>
+			<button
+				onClick={() => {
+					context?.divideBy2();
+				}}
+			>
+				divideBy2
+			</button>
+			<button
+				onClick={() => {
+					context?.setTO100();
+				}}
+			>
+				setTO100
+			</button>
+			<button
+				onClick={() => {
+					context?.setTO12();
+				}}
+			>
+				setTO12
+			</button>
 		</div>
 	);
 }
