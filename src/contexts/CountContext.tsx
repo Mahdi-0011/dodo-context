@@ -1,14 +1,16 @@
 import { createContext, useState } from "react";
 
-// context
+// bygga context -typpa upp våran state sedan bygger vi contexten. 
 export type CountContextType = {
 	count: number;
 	setCount: React.Dispatch<React.SetStateAction<number>>;
 };
-
 export const CountContext = createContext<CountContextType | null>(null);
 
-// context provider-komponent
+
+
+
+// bygga context provider-komponent- typpa upp children sedan skickar vi {--} till children med hjälp av provider.
 type CountContextProviderProps = {
 	children: React.ReactNode;
 };
